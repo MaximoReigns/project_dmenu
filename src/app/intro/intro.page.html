@@ -1,0 +1,19 @@
+<ion-content class="container" color="tertiary" *ngFor="let data of datas">
+  <section class="container__login">
+
+    <figure class="ion-text-center">
+      <img src="{{ data.imgApp }}" alt="Logo DMENU">
+    </figure>
+
+    <ion-button class="button__login" expand="block" color="warning" 
+      [routerLink]="['/login']">
+      {{ data.login }}
+      </ion-button>
+
+      <ion-button class="button__register" expand="block" color="warning" 
+      [routerLink]="['/register']">
+      {{ data.register }}
+    </ion-button>
+    
+  </section>
+</ion-content>

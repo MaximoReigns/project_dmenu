@@ -1,0 +1,36 @@
+<ion-content color="tertiary">
+  <section class="container" style="text-align: center;">
+    <figure>
+      <img src="../../assets/static/logo.png" alt="Logo DMENU">
+    </figure>
+
+    <form style="margin:0 40px" [formGroup]="loginForm" (ngSubmit)="loginUser(loginForm.value)">
+      <ion-item>
+
+        <ion-label>Nombre</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Telefono</ion-label>
+        <ion-input></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Email</ion-label>
+        <ion-input formControlName="email"></ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Contraseña</ion-label>
+        <ion-input type="password"></ion-input>
+      </ion-item>
+
+      <ion-item class="container__button">
+          <button [routerLink]="['/intro']" >Volver</button>
+          <button [routerLink]="['/login']" >Listo</button>
+      </ion-item>
+
+    </form>
+  </section>
+</ion-content>
