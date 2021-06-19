@@ -8,11 +8,28 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-
-  <ion-item button (click)="openModal()">
-    <ion-buttons>
-      <ion-button color="warning">Ver todas las descripciones</ion-button>
-    </ion-buttons>
-  </ion-item>
+<ion-content [fullscreen]="true" color="tertiary" >
+  <section class="container">
+    <img src="../../assets/static/logo.png" alt="logo DMENU">
+    <ion-list>
+      <img class="logo" src="../../assets/static/logo macd.png" alt="Logo McDonald" width="70px">
+      <br>
+      <ion-label color="tertirary" style="padding: 0 15px;">Comida</ion-label>
+      <ion-item button slot="end" (click)="hamburguesaCarne()" >
+        <img src="../../assets/static/hamburgesa.png" alt="hamburgesa" width="80px">
+        <ion-label>Hamburguesa Normal</ion-label>
+      </ion-item>
+  
+      <ion-item button slot="end" (click)="hamburguesaPollo()" >
+        <img src="../../assets/static/hamburgesa pollo.png" alt="hamburgesa pollo" width="80px">
+        <ion-label>Hamburguesa Mc Pollo</ion-label>
+      </ion-item>
+  
+      <ion-item button slot="end" (click)="cajitaFeliz()">
+        <img src="../../assets/static/cajita feliz.png" alt="cajita feliz" width="80px">
+        <ion-label>Cajita Feliz</ion-label>
+      </ion-item>
+    
+    </ion-list>
+  </section>
 </ion-content>

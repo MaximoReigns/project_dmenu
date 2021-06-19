@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ModalController } from '@ionic/angular';
 import { DetailsPage } from '../details/details.page';
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-mcdonald',
@@ -9,7 +10,7 @@ import { DetailsPage } from '../details/details.page';
 })
 export class McdonaldPage {
 
-  constructor(private modalCtrl: ModalController) { }
+  constructor(private modalCtrl: ModalController, private router: Router ) { }
   ionViewDidEnter(){
     console.log('ionViewDidEnter DMENU');
   }
@@ -21,7 +22,15 @@ export class McdonaldPage {
     await modal.present();
   }
 
-  /*changeView(){
+  cajitaFeliz(){
+    this.router.navigateByUrl('/cajita-feliz');
+  }
 
-  }*/
+  hamburguesaCarne(){
+    this.router.navigateByUrl('/hamburguesa-carne');
+  }
+
+  hamburguesaPollo(){
+    this.router.navigateByUrl('/hamburguesa-pollo');
+  }
 }

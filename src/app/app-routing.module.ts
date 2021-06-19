@@ -29,6 +29,22 @@ const routes: Routes = [
   {
     path: 'details',
     loadChildren: () => import('./details/details.module').then( m => m.DetailsPageModule)
+  },
+  {
+    path: 'hamburguesa-carne',
+    loadChildren: () => import('./hamburguesa-carne/hamburguesa-carne.module').then( m => m.HamburguesaCarnePageModule)
+  },
+  {
+    path: 'hamburguesa',
+    loadChildren: () => import('./hamburguesa/hamburguesa.module').then( m => m.HamburguesaPageModule)
+  },
+  {
+    path: 'cajita-feliz',
+    loadChildren: () => import('./cajita-feliz/cajita-feliz.module').then( m => m.CajitaFelizPageModule)
+  },
+  {
+    path: 'hamburguesa-pollo',
+    loadChildren: () => import('./hamburguesa-pollo/hamburguesa-pollo.module').then( m => m.HamburguesaPolloPageModule)
   }
 ];
 @NgModule({
