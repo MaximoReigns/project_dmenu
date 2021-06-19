@@ -1,0 +1,18 @@
+<ion-header>
+  <ion-toolbar color="primary">
+    <ion-icon slot="icon-only" name="md-apps"></ion-icon>
+    <ion-buttons slot="start">
+      <ion-back-button defaultHref="/tabs"></ion-back-button>
+    </ion-buttons>
+    <ion-title>Mc Donalds</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <ion-item button (click)="openModal()">
+    <ion-buttons>
+      <ion-button color="warning">Ver todas las descripciones</ion-button>
+    </ion-buttons>
+  </ion-item>
+</ion-content>

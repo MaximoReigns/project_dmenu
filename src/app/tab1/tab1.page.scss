@@ -1,0 +1,14 @@
+.container {
+  padding-top: 50%;
+}
+
+.destacados {
+  display: flex;
+  justify-content: center;
+}
+
+.destacados img {
+  border: 2px solid white;
+  border-radius: 25px;
+  margin: 0 15px;
+}

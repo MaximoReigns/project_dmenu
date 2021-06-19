@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">DMENU</string>
+    <string name="title_activity_main">DMENU</string>
+    <string name="package_name">com.dmenu.app</string>
+    <string name="custom_url_scheme">com.dmenu.app</string>
+</resources>

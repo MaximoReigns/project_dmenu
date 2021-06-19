@@ -1,0 +1,6 @@
+{
+	"appId": "com.dmenu.app",
+	"appName": "DMENU",
+	"webDir": "www",
+	"bundledWebRuntime": false
+}

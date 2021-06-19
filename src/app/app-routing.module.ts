@@ -17,6 +17,18 @@ const routes: Routes = [
   {
     path: 'register',
     loadChildren: () => import('./register/register.module').then( m => m.RegisterPageModule)
+  },
+  {
+    path: 'mcdonald',
+    loadChildren: () => import('./mcdonald/mcdonald.module').then( m => m.McdonaldPageModule)
+  },
+  {
+    path: 'casadelosabuelos',
+    loadChildren: () => import('./casadelosabuelos/casadelosabuelos.module').then( m => m.CasadelosabuelosPageModule)
+  },
+  {
+    path: 'details',
+    loadChildren: () => import('./details/details.module').then( m => m.DetailsPageModule)
   }
 ];
 @NgModule({
