@@ -8,28 +8,41 @@
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true" color="tertiary" >
-  <section class="container">
-    <img src="../../assets/static/logo.png" alt="logo DMENU">
+<ion-content [fullscreen]="true">
+  <ul>
+    <li *ngIf="items.length === 0">El carrito está vacío 😔</li>
+    <li *ngFor="let name of items; index as i">
+      {{ i }} {{ name }}
+      <ion-icon color="danger" name="trash" (click)="deleteItems(i)"></ion-icon>
+    </li>
+  </ul>
+  <section class="container" *ngFor="let normals of normal">
+    <img src="{{ normals.imglogo }}" alt="logo DMENU">
     <ion-list>
-      <img class="logo" src="../../assets/static/logo macd.png" alt="Logo McDonald" width="70px">
+      <img class="logo" src="{{ normals.imgLogoFood }}" alt="Logo McDonald" width="70px">
       <br>
-      <ion-label color="tertirary" style="padding: 0 15px;">Comida</ion-label>
-      <ion-item button slot="end" (click)="hamburguesaCarne()" >
+      <ion-label color="tertirary" style="padding: 0 15px;"> {{ normals.category }}</ion-label>
+      <ion-item slot="end" >
         <img src="../../assets/static/hamburgesa.png" alt="hamburgesa" width="80px">
-        <ion-label>Hamburguesa Normal</ion-label>
+        <ion-label>{{ normals.nameHamburger }}</ion-label>
+        <ion-icon name="eye" button (click)="hamburguesaCarne()"></ion-icon>
+        <ion-icon color="success" name="add-circle" (click)="addItemNormal()"></ion-icon>
+      </ion-item>
+
+      <ion-item slot="end" *ngFor="let chickens of chicken">
+        <img src="{{ chickens.imgLogoFood }}" alt="hamburgesa pollo" width="80px">
+        <ion-label>{{ chickens.nameHamburger }}</ion-label>
+        <ion-icon name="eye" button (click)="hamburguesaPollo()"></ion-icon>
+        <ion-icon color="success" name="add-circle" (click)="addItemChicken()"></ion-icon>
       </ion-item>
   
-      <ion-item button slot="end" (click)="hamburguesaPollo()" >
-        <img src="../../assets/static/hamburgesa pollo.png" alt="hamburgesa pollo" width="80px">
-        <ion-label>Hamburguesa Mc Pollo</ion-label>
+      <ion-item slot="end" *ngFor="let happys of happy">
+        <img src="{{ happys.imgLogoFood }}" alt="cajita feliz" width="80px">
+        <ion-label>{{ happys.nameHamburger }}</ion-label>
+        <ion-icon name="eye" button (click)="cajitaFeliz()"></ion-icon>
+        <ion-icon color="success" name="add-circle" (click)="addItemHappy()"></ion-icon>
       </ion-item>
-  
-      <ion-item button slot="end" (click)="cajitaFeliz()">
-        <img src="../../assets/static/cajita feliz.png" alt="cajita feliz" width="80px">
-        <ion-label>Cajita Feliz</ion-label>
-      </ion-item>
-    
+
     </ion-list>
   </section>
 </ion-content>
